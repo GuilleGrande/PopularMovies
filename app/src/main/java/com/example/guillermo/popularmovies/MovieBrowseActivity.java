@@ -4,9 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity
+public class MovieBrowseActivity extends AppCompatActivity
 {
-    private final String LOG_TAG = MainActivity.class.getSimpleName();
+    private final String LOG_TAG = MovieBrowseActivity.class.getSimpleName();
     private static final String MOVIEBROWSERFRAGMENT_TAG = "MBF_TAG";
 
     private boolean mTwoPane;
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         Log.d(LOG_TAG, "CREATE");
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_movie_browse);
     }
 
     @Override
