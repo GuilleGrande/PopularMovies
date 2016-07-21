@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">PopularMovies</string>
+    
+    <string-array name="movie_names">
+        <item>Assassin</item>
+        <item>Batman V Superman - Dawn of Justice</item>
+        <item>Big Miracle</item>
+        <item>Captain America - Winter Soldier</item>
+        <item>Fight Club</item>
+        <item>Grey</item>
+        <item>In the Heart of the Sea</item>
+        <item>Inception</item>
+        <item>Keanu</item>
+        <item>Lion King</item>
+        <item>Salt</item>
+        <item>The Martian</item>
+        <item>Titanic</item>
+        <item>Warcraft</item>
+    </string-array>
 </resources>
