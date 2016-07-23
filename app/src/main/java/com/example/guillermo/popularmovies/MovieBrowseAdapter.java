@@ -2,10 +2,12 @@ package com.example.guillermo.popularmovies;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 
 import com.example.guillermo.popularmovies.data.Movie;
 
@@ -47,17 +49,17 @@ public class MovieBrowseAdapter extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return 0;
+        return movieArrayList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return movieArrayList.get(i);
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
@@ -71,5 +73,13 @@ public class MovieBrowseAdapter extends BaseAdapter{
 
     public void orderByTopRated(Context context){
 
+    }
+
+    public static class ViewHolder{
+        ImageView moviePoster;
+
+        public ViewHolder(View view){
+            moviePoster = (ImageView) view.findViewById(R.id.image_view);
+        }
     }
 }
