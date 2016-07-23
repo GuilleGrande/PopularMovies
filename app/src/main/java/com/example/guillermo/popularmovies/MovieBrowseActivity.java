@@ -17,6 +17,7 @@ public class MovieBrowseActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         Log.d(LOG_TAG, "CREATE");
         setContentView(R.layout.activity_movie_browse);
+        //MovieBrowseFragment movieBrowseFragment = ((MovieBrowseFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_movie_browse));
     }
 
     @Override

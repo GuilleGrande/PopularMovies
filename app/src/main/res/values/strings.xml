@@ -17,4 +17,7 @@
         <item>Titanic</item>
         <item>Warcraft</item>
     </string-array>
+
+    <string name="action_order_popularity">Order By Popularity</string>
+    <string name="action_order_newest">Order By Newest</string>
 </resources>
