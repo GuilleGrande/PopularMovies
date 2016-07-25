@@ -2,7 +2,6 @@ package com.example.guillermo.popularmovies;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,9 +15,6 @@ import android.widget.GridView;
  */
 public class MovieBrowseFragment extends Fragment {
 
-    private MovieBrowseAdapter mMovieBrowseAdapter;
-    private GridView mGridView;
-
     private static final String LOG_TAG = MovieBrowseFragment.class.getSimpleName();
 
     public MovieBrowseFragment() {}
@@ -27,6 +23,8 @@ public class MovieBrowseFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        //mMovieBrowseAdapter = new MovieBrowseAdapter(getContext());
+
 
         // This fragment shouuld handle menu events
         setHasOptionsMenu(true);
@@ -60,7 +58,6 @@ public class MovieBrowseFragment extends Fragment {
 
         // Inflate movie browse fragment to the view
         View rootView = inflater.inflate(R.layout.fragment_movie_browse, container, false);
-
 
         return super.onCreateView(inflater, container, savedInstanceState);
     }

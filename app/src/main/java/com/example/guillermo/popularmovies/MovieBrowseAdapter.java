@@ -3,6 +3,7 @@ package com.example.guillermo.popularmovies;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -19,8 +20,10 @@ import java.util.ArrayList;
 public class MovieBrowseAdapter extends BaseAdapter{
 
     ArrayList<Movie> movieArrayList;
+    Context context;
 
     public MovieBrowseAdapter(Context context){
+        this.context = context;
         movieArrayList = new ArrayList<Movie>();
         Resources resources = context.getResources();
 
@@ -46,7 +49,6 @@ public class MovieBrowseAdapter extends BaseAdapter{
         }
     }
 
-
     @Override
     public int getCount() {
         return movieArrayList.size();
@@ -64,7 +66,24 @@ public class MovieBrowseAdapter extends BaseAdapter{
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+
+        View gridItem = view;
+        ViewHolder holder = null;
+
+        if (gridItem == null){
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            gridItem = inflater.inflate(R.layout.grid_item_movie_poster, viewGroup, false);
+            holder = new ViewHolder(gridItem);
+            gridItem.setTag(holder);
+        }
+        else{
+            holder = (ViewHolder) gridItem.getTag();
+        }
+
+        Movie tempMovie = movieArrayList.get(i);
+        holder.moviePoster.setImageResource(tempMovie.getMoviePosterId());
+
+        return gridItem;
     }
 
     public void orderByPopularity(Context context){

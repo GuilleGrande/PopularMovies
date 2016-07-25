@@ -12,7 +12,7 @@
     <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/grid_view_moview_browse"
+        android:id="@+id/grid_view_movie_browse"
         android:numColumns="auto_fit"
         android:columnWidth="120dp"
         android:stretchMode="spacingWidthUniform">
